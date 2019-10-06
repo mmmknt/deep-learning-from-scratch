@@ -2,11 +2,13 @@
 import numpy as np
 
 def OR(x1, x2):
-    w1, w2, theta = 0.7, 0.7, 0.5
-    tmp = x1 * w1 + x2 * w2
-    if tmp <= theta:
+    x = np.array([x1, x2])
+    w = np.array([0.7, 0.7])
+    b = -0.5
+    tmp = np.sum(w * x) + b
+    if tmp <= 0:
         return 0
-    elif tmp > theta:
+    else:
         return 1
 
 if __name__ == '__main__':
