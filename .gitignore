@@ -4,3 +4,6 @@
 *.pyc
 __pycache__/
 mnist.pkl
+
+# Idea settings
+.idea
